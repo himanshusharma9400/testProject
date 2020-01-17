@@ -22,12 +22,12 @@ export default (state = initialState, action) => {
 export const actions = {
     filterList: value => dispatch => {
         if(!value){
-            dispatch(actions.updateShowList(LISTING_DATA))
+            dispatch(actions.updateShowList(LISTING_DATA.shows))
             return
         }
         const inputValue = value.trim().toLowerCase()
         const inputLength = inputValue.length
-        const updatedList = LISTING_DATA.shows.filter(show => show.value.toLowerCase().slice(0, inputLength) === inputValue)
+        const updatedList = LISTING_DATA.shows.filter(show => show.title.toLowerCase().slice(0, inputLength) === inputValue)
         dispatch(actions.updateShowList(updatedList))
     },
     updateShowList: (list) => ({ type: types.UPDATE_LIST, payload: list})

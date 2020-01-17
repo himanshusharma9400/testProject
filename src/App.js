@@ -14,6 +14,7 @@ function App() {
                     <NavBar/>
                     <Switch>
                         <Route path='/' component={Home} exact/>
+                        <Route path='/:show'/>
                     </Switch>
                 </Provider>
             </Router>
