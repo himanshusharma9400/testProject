@@ -7,7 +7,7 @@ import Home from './modules/home/homeContainer'
 import ShowDetails from './modules/showDetails/showDetailsContainer'
 import NavBar from "./commons/navbar/navBar";
 import BackgroundImageContainer from "./commons/backgroundImageContainer/backgroundImageContainer";
-import NotFoundPageContainer from "./commons/NotFound/notFoundPageContainer";
+import NotFoundPageContainer from "./commons/notFound/notFoundPageContainer";
 
 function App() {
     return (

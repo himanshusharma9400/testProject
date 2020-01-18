@@ -10,7 +10,7 @@ export const Container = styled.div`
 `;
 
 export const TitleText = styled.div`
-  color: red;
+  color: purple;
   font-weight: bold;
   font-size: 24px;
   line-height: 24px;

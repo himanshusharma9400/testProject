@@ -1,7 +1,8 @@
-import React, {useCallback} from 'react'
+import React, {useCallback, useEffect} from 'react'
 import HomeComponent from "./homeComponent";
 import { connect } from 'react-redux'
 import {getListingData} from "../../redux-store/selectors/listingSelector";
+import {actions} from "../../redux-store/reducers/listingDuck";
 
 const HomeContainer = props => {
     const { listingData } = props
@@ -11,6 +12,13 @@ const HomeContainer = props => {
         },
         [props.history],
     );
+
+    useEffect(() => {
+        return () => {
+            props.filterShowsList('')
+        };
+    }, []);
+
 
     return (
         <HomeComponent
@@ -25,6 +33,7 @@ const mapStateToProps = state => ({
 })
 
 const mapDispatchToProps = dispatch => ({
+    filterShowsList: showItem => dispatch(actions.filterList(showItem))
 })
 
 export default connect(

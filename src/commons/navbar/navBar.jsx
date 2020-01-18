@@ -4,6 +4,7 @@ import {Container, SearchBarContainer, TitleText} from "./navBarStyles";
 import strings from "../../language/strings";
 import SearchBar from "../searchBar/searchBar";
 import {actions} from "../../redux-store/reducers/listingDuck";
+import {Link} from "react-router-dom";
 
 const NavBar = props => {
     if(!props.navBarState.navBarVisible){
@@ -11,7 +12,9 @@ const NavBar = props => {
     }
     return (
         <Container>
-            <TitleText>{strings.navBarTitle}</TitleText>
+            <Link to={'/'} style={{textDecoration: 'none'}}>
+                <TitleText>{strings.navBarTitle}</TitleText>
+            </Link>
             {
                 props.navBarState.searchBarState &&
                     <SearchBarContainer>

@@ -2,7 +2,9 @@ const strings = {
     navBarTitle: 'svideo',
     search: 'Search',
     invalidPage: 'You have landed on an Invalid Page!!',
-    noResultsFound: 'No Results Found!!'
+    noResultsFound: 'No Results Found!!',
+    showNotFound: 'Show Not Found',
+    rating:'Rating'
 }
 
 export default strings

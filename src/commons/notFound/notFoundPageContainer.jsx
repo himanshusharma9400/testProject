@@ -10,7 +10,7 @@ const NotFoundPageContainer = props => {
         return () => {
             props.showNavBar()
         };
-    }, [props]);
+    }, []);
     return (
         <Container>
             {strings.invalidPage}
