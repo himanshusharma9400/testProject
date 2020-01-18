@@ -5,6 +5,7 @@ import { Provider } from 'react-redux'
 import {store} from "./redux-store/store";
 import Home from './modules/home/homeContainer'
 import NavBar from "./commons/navbar/navBar";
+import BackgroundImageContainer from "./commons/backgroundImageContainer/backgroundImageContainer";
 
 function App() {
     return (
@@ -12,6 +13,7 @@ function App() {
             <Router>
                 <Provider store={store}>
                     <NavBar/>
+                    <BackgroundImageContainer/>
                     <Switch>
                         <Route path='/' component={Home} exact/>
                         <Route path='/:show'/>
