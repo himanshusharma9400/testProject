@@ -6,7 +6,7 @@ import {
     ShowNotFound,
     ShowRatings,
     ShowRatingsDiv,
-    ShowTitle, VideoDiv
+    ShowTitle
 } from "./showDetailsStyles";
 import PropTypes from "prop-types";
 import strings from "../../language/strings";
@@ -38,6 +38,7 @@ const ShowDetailsComponent = props => {
                         {
                             showVideoUrl &&
                             <iframe
+                                title={showData.trailer}
                                 style={IFrameStyle}
                                 src={showVideoUrl}
                                 frameBorder="0"

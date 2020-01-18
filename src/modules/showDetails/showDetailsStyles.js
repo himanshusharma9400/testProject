@@ -94,13 +94,6 @@ export const ShowImage = styled.img`
   }
 `
 
-export const VideoDiv = styled.div`
-  width: 90%;
-  margin-left: auto;
-  margin-right: auto;
-  height: 512px;
-`
-
 export const IFrameStyle = {
     width: '90%',
     marginLeft: 'auto',
