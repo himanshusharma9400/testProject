@@ -4,8 +4,10 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import { Provider } from 'react-redux'
 import {store} from "./redux-store/store";
 import Home from './modules/home/homeContainer'
+import ShowDetails from './modules/showDetails/showDetailsContainer'
 import NavBar from "./commons/navbar/navBar";
 import BackgroundImageContainer from "./commons/backgroundImageContainer/backgroundImageContainer";
+import NotFoundPageContainer from "./commons/NotFound/notFoundPageContainer";
 
 function App() {
     return (
@@ -16,7 +18,10 @@ function App() {
                     <BackgroundImageContainer/>
                     <Switch>
                         <Route path='/' component={Home} exact/>
-                        <Route path='/:show'/>
+                        <Route path='/:show' component={ShowDetails} exact/>
+                        <Route path="*">
+                            <NotFoundPageContainer/>
+                        </Route>
                     </Switch>
                 </Provider>
             </Router>

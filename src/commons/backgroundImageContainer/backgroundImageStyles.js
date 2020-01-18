@@ -5,6 +5,8 @@ export const Container = styled.img`
   bottom:0;
   left:0;
   right:0;
+  min-height: 100vh;
+  min-width: 100vw;
   height: 100%;
   width: 100%;
   z-index: -100;

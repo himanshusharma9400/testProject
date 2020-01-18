@@ -7,6 +7,17 @@ export const Container = styled.div`
   justify-content: center;
 `
 
+export const NoResults = styled.div`
+  width: 100%;
+  color: rgba(0,0,0,0.87);
+  justify-content: center;
+  text-align: center;
+  display: flex;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 24px;
+`
+
 export const CardDiv = styled.div`
   height: 280px;
   width: 400px;
