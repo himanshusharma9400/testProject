@@ -16,7 +16,6 @@ const get = async (
 
     try {
         const response = await axios.get(computedUrl, config)
-        console.log('Response: ', response)
         if (successCallback) {
             return successCallback(response.data)
         }
