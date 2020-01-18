@@ -26,8 +26,7 @@ export const actions = {
             return
         }
         const inputValue = value.trim().toLowerCase()
-        const inputLength = inputValue.length
-        const updatedList = LISTING_DATA.shows.filter(show => show.title.toLowerCase().slice(0, inputLength) === inputValue)
+        const updatedList = LISTING_DATA.shows.filter(show => show.title.toLowerCase().includes(inputValue))
         dispatch(actions.updateShowList(updatedList))
     },
     updateShowList: (list) => ({ type: types.UPDATE_LIST, payload: list})
