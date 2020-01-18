@@ -42,7 +42,7 @@ const ShowDetailsContainer = props => {
 
     const showVideoUrl = useMemo(() => {
         return getVideoLink(showData)
-    }, [props.match.params])
+    }, [showData])
 
     return (
         <ShowDetailsComponent

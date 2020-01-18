@@ -64,6 +64,7 @@ export const ShowRatingsDiv = styled.div`
 export const ShowRatings = styled.div`
   font-size: 16px;
   line-height: 18px;
+  font-weight: bold;
   color: rgba(0,0,0,0.87);
   @media (max-width: 768px) {
     font-size: 12px;
