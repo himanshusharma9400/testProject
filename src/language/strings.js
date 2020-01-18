@@ -4,7 +4,8 @@ const strings = {
     invalidPage: 'You have landed on an Invalid Page!!',
     noResultsFound: 'No Results Found!!',
     showNotFound: 'Show Not Found',
-    rating:'Rating'
+    rating:'Rating',
+    back:'Back'
 }
 
 export default strings

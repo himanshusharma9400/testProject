@@ -12,9 +12,11 @@ const ShowDetailsContainer = props => {
 
     useEffect(() => {
         props.hideSearchBar()
+        props.showBackButton()
         getIMDBRating()
         return () => {
             props.showSearchBar()
+            props.hideBackButton()
         };
     }, []);
 
@@ -56,6 +58,8 @@ const ShowDetailsContainer = props => {
 const mapDispatchToProps = dispatch => ({
     hideSearchBar: () => dispatch(navBarActions.hideSearchBar()),
     showSearchBar: () => dispatch(navBarActions.showSearchBar()),
+    hideBackButton: () => dispatch(navBarActions.hideBackButton()),
+    showBackButton: () => dispatch(navBarActions.showBackButton()),
     getIMDBRating: (payload) => dispatch(showDetailsActions.getIMDBRating(payload))
 })
 

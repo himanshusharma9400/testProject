@@ -1,6 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import {Container, SearchBarContainer, TitleText} from "./navBarStyles";
+import {BackButton, Container, SearchBarContainer, TitleText} from "./navBarStyles";
+import { createBrowserHistory } from "history";
 import strings from "../../language/strings";
 import SearchBar from "../searchBar/searchBar";
 import {actions} from "../../redux-store/reducers/listingDuck";
@@ -10,6 +11,7 @@ const NavBar = props => {
     if(!props.navBarState.navBarVisible){
         return null
     }
+    const history = createBrowserHistory()
     return (
         <Container>
             <Link to={'/'} style={{textDecoration: 'none'}}>
@@ -20,6 +22,12 @@ const NavBar = props => {
                     <SearchBarContainer>
                         <SearchBar searchFunction={props.filterShowsList} placeholder={strings.search}/>
                     </SearchBarContainer>
+            }
+            {
+                props.navBarState.backButtonState &&
+                    <BackButton onClick={() => history.goBack()}>
+                        {strings.back}
+                    </BackButton>
             }
         </Container>
     )

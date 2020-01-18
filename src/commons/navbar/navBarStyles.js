@@ -16,6 +16,15 @@ export const TitleText = styled.div`
   line-height: 24px;
 `;
 
+export const BackButton = styled.div`
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 24px;
+  margin-left: auto;
+  color: rgba(0,0,0,0.54);
+  cursor: pointer;
+`
+
 export const SearchBarContainer = styled.div`
   margin-left: auto;
 `
